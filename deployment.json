@@ -1,0 +1,20 @@
+{
+  "business_id": "b14",
+  "name": "LeadFlow AI",
+  "external_url": "https://theleadflowhq.com",
+  "external_target": "https://theleadflowhq.com",
+  "external_domain": "theleadflowhq.com",
+  "runtime_path": "/businesses/b14/landing/leadflow-leak-audit",
+  "offer_id": "offer_b14_core",
+  "funnel_id": "funnel_b14_core",
+  "landing_page_id": "lp_b14_leadflow-leak-audit",
+  "export_files": [
+    "channels.html",
+    "checkout.html",
+    "index.html",
+    "offer.html",
+    "review-assets.json",
+    "styles.css",
+    "thank-you.html"
+  ]
+}
