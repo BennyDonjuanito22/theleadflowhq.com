@@ -1,17 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LeadFlow AI | Pricing</title>
-  <meta name="description" content="Audit pages, routing demos, and pilot screens all need one crisp diagnostic visual system tied to actual routing logic." />
-  <meta property="og:title" content="LeadFlow AI | Pricing" />
-  <meta property="og:description" content="Audit pages, routing demos, and pilot screens all need one crisp diagnostic visual system tied to actual routing logic." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://theleadflowhq.com/" />
+  <title>LeadFlow AI | Offer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
-  
 </head>
 <body>
   <main class="page">
@@ -20,55 +14,67 @@
         <span class="brand-mark"></span>
         <span class="brand-copy">
           <strong>LeadFlow AI</strong>
+          <span>Route lines or branching node flow mark.</span>
         </span>
       </a>
       <nav class="nav">
         <a class='button ghost' href='index.html'>Home</a>
-        <a class='button primary' href='offer.html'>Pricing</a>
-        <a class='button ghost' href='channels.html'>About</a>
+        <a class='button primary' href='offer.html'>Offer</a>
+        <a class='button ghost' href='checkout.html'>Checkout</a>
+        <a class='button ghost' href='channels.html'>Channels</a>
+        <a class='button ghost' href='thank-you.html'>Thank You</a>
       </nav>
     </header>
     
     <section class="hero">
       <article class="hero-card">
-        <div class="eyebrow">Pricing</div>
-        <h1>Simple, transparent pricing.</h1>
-        <p>Choose the plan that fits your needs. Every purchase includes instant digital delivery and dedicated support.</p>
+        <div class="eyebrow">Offer Page System</div>
+        <h1>LeadFlow AI Offer Architecture</h1>
+        <p>This page shows the designed offer stack, pricing hierarchy, and product or service card rules that should remain aligned across owned and third-party surfaces.</p>
       </article>
       <aside class="hero-card">
-        <h2>What&rsquo;s Included</h2>
-        <ul>
-          <li>Instant digital delivery</li>
-          <li>Dedicated support via <a href="mailto:support@theleadflowhq.com">support@theleadflowhq.com</a></li>
-          <li>14-day satisfaction guarantee</li>
-        </ul>
+        <h2>Inventory Rules</h2>
+        <ul><li>Offer cards compare current-state leakage to improved-state routing, not vague automation promises.</li><li>Routing diagrams, scorecards, and alert snippets share the same blue, violet, and green logic system.</li><li>Public pages never imply a CRM replacement or fake dashboard product.</li></ul>
       </aside>
     </section>
     <section class="panel" style="margin-top:24px;">
-      <h2>Choose Your Plan</h2>
+      <h2>Offer Cards</h2>
       <div class="offer-grid" style="margin-top:18px;"><article class='offer-card'><h3>Lead Leak Audit</h3><div class='price'>$149</div><p>One-time routing-gap diagnostic with response-time and attribution findings.</p><ul></ul></article><article class='offer-card'><h3>Routing Pilot</h3><div class='price'>$497</div><p>One-funnel routing setup with scoring rules and alert outputs.</p><ul></ul></article></div>
     </section>
-    <section class="panel" style="margin-top:24px;">
-      <div class="actions" style="justify-content:center;">
-        <a class="button primary" href="./checkout.html">Proceed to Checkout</a>
-      </div>
-    </section>
     
-    <footer class="site-footer">
-      <div class="footer-note">&copy; 2026 LeadFlow AI. All rights reserved.</div>
-      <div class="footer-links">
-        <a href="./index.html">Home</a>
-        <a href="./offer.html">Pricing</a>
-        <a href="./channels.html">About</a>
-        <a href='mailto:support@theleadflowhq.com'>Contact</a>
-      </div>
-      <div class="footer-links" style="margin-top:8px;">
-        <a href="./privacy.html">Privacy</a>
-        <a href="./terms.html">Terms</a>
-        <a href="./refunds.html">Refunds</a>
-      </div>
-    </footer>
+    <div class="footer-note">Local deployment pack for LeadFlow AI. No launch without approval.</div>
   </main>
-  
+
+  <!-- ASI Analytics (lightweight, privacy-friendly) -->
+  <script>
+  (function(){
+    var bid = document.body.getAttribute('data-business-id') || 'unknown';
+    var page = location.pathname.split('/').pop() || 'index.html';
+    var key = 'asi_pv_' + bid;
+    try {
+      var data = JSON.parse(localStorage.getItem(key) || '{}');
+      data[page] = (data[page] || 0) + 1;
+      data._total = (data._total || 0) + 1;
+      data._last = new Date().toISOString();
+      data._ref = document.referrer || 'direct';
+      localStorage.setItem(key, JSON.stringify(data));
+    } catch(e) {}
+    // Beacon to analytics endpoint if configured
+    if (window.ASI_ANALYTICS_URL) {
+      var payload = JSON.stringify({
+        business_id: bid,
+        page: page,
+        referrer: document.referrer || 'direct',
+        timestamp: new Date().toISOString(),
+        ua: navigator.userAgent
+      });
+      try {
+        navigator.sendBeacon(window.ASI_ANALYTICS_URL, payload);
+      } catch(e) {
+        // Silent fail — analytics should never break the site
+      }
+    }
+  })();
+  </script>
 </body>
 </html>
